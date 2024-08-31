@@ -1,6 +1,11 @@
 @import url(../../fonts.scss);
 
 .container {
+  .container-completed-hours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   display: flex;
   gap: 10px;
   align-items: center;
@@ -41,5 +46,46 @@
       width: 2px;
       background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
     }
+  }
+}
+
+.container-completed-hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hour-completed {
+    font-family: ClashDisplay;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      height: 15px;
+      width: 15px;
+      background-color: #9ef01a;
+      display: block;
+      border-radius: 50%;
+
+      animation: animation-outline 1s ease-out infinite;
+    }
+
+    @keyframes animation-outline {
+      from {
+        outline: 0px solid #9ef01acf;
+      }
+      to {
+        outline: 15px solid #9ef01a00;
+      }
+    }
+  }
+
+  p {
+    color: black;
+    font-family: ClashDisplay;
+    font-weight: 200;
+    color: #171717;
   }
 }
