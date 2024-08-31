@@ -1,0 +1,45 @@
+@import url(../../fonts.scss);
+
+.container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  .container-data {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 90px;
+      line-height: 85px;
+
+      font-family: ClashDisplay;
+    }
+
+    p {
+      color: white;
+      font-family: ClashDisplay;
+      background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+      -webkit-background-clip: text;
+      color: transparent;
+
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .line {
+      height: 60px;
+      width: 2px;
+      background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+    }
+  }
+}
