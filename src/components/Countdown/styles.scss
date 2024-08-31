@@ -1,11 +1,9 @@
 @import url(../../fonts.scss);
 
+$responsive_breakpoint: 760px;
+$bg-gradient: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+
 .container {
-  .container-completed-hours {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   display: flex;
   gap: 10px;
   align-items: center;
@@ -19,7 +17,7 @@
     justify-content: center;
 
     span {
-      background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+      background: $bg-gradient;
       -webkit-background-clip: text;
       color: transparent;
       text-transform: uppercase;
@@ -33,7 +31,7 @@
     p {
       color: white;
       font-family: ClashDisplay;
-      background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+      background: $bg-gradient;
       -webkit-background-clip: text;
       color: transparent;
 
@@ -44,7 +42,21 @@
     .line {
       height: 60px;
       width: 2px;
-      background: linear-gradient(to bottom, #f98125, #fa8e3b 50%, #fb9b50);
+      background: $bg-gradient;
+    }
+  }
+
+  @media (max-width: $responsive_breakpoint) {
+    flex-direction: column;
+    gap: 0;
+
+    .container-data {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .line {
+      display: none;
     }
   }
 }
